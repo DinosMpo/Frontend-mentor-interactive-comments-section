@@ -1,0 +1,7 @@
+/* 732px */
+.comment {
+    width: 100%;
+    max-width: 732px;
+    min-height: 167px;
+    border: 1px solid black;
+}
