@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+body {
+    /* font-family: ''; */
+    background-color: hsl(228, 33%, 97%);
+    margin: 0px auto;
+}
+
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
+    border: 1px solid red;
 }

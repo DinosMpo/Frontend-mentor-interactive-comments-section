@@ -1,0 +1,21 @@
+.comment-reply-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    height: 20px;
+    /* border: 1px solid black; */
+}
+
+.comment-reply-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-reply-text {
+    font-family: 'Rubik';
+    font-weight: 500;
+    color: hsl(238, 40%, 52%);
+}

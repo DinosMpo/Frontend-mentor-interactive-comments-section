@@ -11,9 +11,13 @@ export default function CommentDetails({ createdAt, user }) {
         height={30}
       />
       {/* user name */}
-      {user.username}
+      <div className='comment-detail-username'>
+        {user.username}
+      </div>
       {/* comment date */}
-      {createdAt}
+      <div className='comment-detail-created'>
+        {createdAt}
+      </div>
     </div>
   )
 }

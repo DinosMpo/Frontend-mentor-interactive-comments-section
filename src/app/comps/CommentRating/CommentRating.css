@@ -1,13 +1,13 @@
 .comment-rating {
     height: 100px;
-    width: 40px;
+    min-width: 40px;
     background-color: hsl(228, 33%, 97%);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 

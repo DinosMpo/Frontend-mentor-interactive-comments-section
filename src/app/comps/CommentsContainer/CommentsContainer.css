@@ -1,8 +1,10 @@
 .comments-container {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
