@@ -1,16 +1,16 @@
-.comment-details {
+.reply-details {
     /* border: 1px dashed black; */
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.comment-detail-username {
+.reply-detail-username {
     font-family: 'Rubik';
     font-weight: 500;
 }
 
-.comment-detail-created {
+.reply-detail-created {
     font-family: 'Rubik';
     color: hsl(211, 10%, 45%);
 }

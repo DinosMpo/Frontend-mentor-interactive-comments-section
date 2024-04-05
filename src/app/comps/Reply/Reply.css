@@ -1,0 +1,26 @@
+.reply {
+    width: 100%;
+    min-width: 645px;
+    min-height: 167px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    box-sizing: border-box;
+    gap: 25px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.reply-section {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.reply-details-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

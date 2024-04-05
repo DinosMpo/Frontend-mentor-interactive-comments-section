@@ -1,4 +1,4 @@
-.comment-reply-container {
+.reply-to-reply-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,13 +8,13 @@
     /* border: 1px solid black; */
 }
 
-.comment-reply-image {
+.reply-to-reply-image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.comment-reply-text {
+.reply-to-reply-text {
     font-family: 'Rubik';
     font-weight: 500;
     color: hsl(238, 40%, 52%);

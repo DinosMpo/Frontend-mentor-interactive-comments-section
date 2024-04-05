@@ -1,0 +1,13 @@
+.reply-text {
+
+}
+
+.reply-text-replying-to {
+    cursor: pointer;
+    color: hsl(238, 40%, 52%);
+    font-weight: 700;
+}
+
+.reply-text-text {
+    
+}
