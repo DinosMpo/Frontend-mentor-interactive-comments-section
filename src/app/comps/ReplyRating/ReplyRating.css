@@ -1,0 +1,25 @@
+.reply-rating {
+    height: 100px;
+    min-width: 40px;
+    background-color: hsl(228, 33%, 97%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+
+}
+
+.reply-rating-plus, .reply-rating-minus {
+    color: hsl(239, 57%, 85%);
+    font-size: 20px;
+    font-family: 'Rubik';
+    font-weight: 500;
+}
+
+.reply-rating-number {
+    font-family: 'Rubik';
+    font-weight: 500;
+    color: hsl(238, 40%, 52%);
+}

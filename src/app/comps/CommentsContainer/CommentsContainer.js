@@ -2,21 +2,18 @@
 
 import './CommentsContainer.css';
 import Comment from '../Comment/Comment';
-import data from '../../../../public/data.json';
 import { useEffect } from 'react';
 
-export default function CommentsContainer() {
+export default function CommentsContainer( { comments } ) {
   // useEffect(() => console.log(commentsList));
-  const commentsList = data.comments;
-  const comments = commentsList.map((comment, key) => {
+  const commentsList = comments.map((comment, key) => {
     return <Comment comment={comment} key={key} />
   });
 
   return (
     <div className='comments-container'>
-        CommentsContainer
         {/* <Comment /> */}
-        {comments}
+        {commentsList}
     </div>
   )
 }

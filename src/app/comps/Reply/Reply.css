@@ -11,3 +11,16 @@
     background-color: grey;
     border-radius: 10px;
 }
+
+.reply-section {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.reply-details-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
