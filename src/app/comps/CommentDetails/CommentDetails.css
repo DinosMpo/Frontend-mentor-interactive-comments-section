@@ -8,9 +8,23 @@
 .comment-detail-username {
     font-family: 'Rubik';
     font-weight: 500;
+    display: flex;
+    gap: 6px;
 }
 
 .comment-detail-created {
     font-family: 'Rubik';
     color: hsl(211, 10%, 45%);
+}
+
+.current-user-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: hsl(238, 40%, 52%);
+    width: 36px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 5px;
 }
