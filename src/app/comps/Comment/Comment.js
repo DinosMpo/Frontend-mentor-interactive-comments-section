@@ -6,13 +6,15 @@ import CommentRating from '../CommentRating/CommentRating';
 import CommentReply from '../CommentReply/CommentReply';
 import CommentText from '../CommentText/CommentText';
 import Reply from '../Reply/Reply';
+import ReplyToComment from '../ReplyToComment/ReplyToComment';
+import UserCommentActions from '../UserCommentActions/UserCommentActions';
 import './Comment.css';
 
-export default function Comment({ comment }) {
+export default function Comment({ comment, currentUser }) {
   useEffect(() => console.log(comment.replies));
 
   const repliesList = comment.replies.map((reply, key) => {
-    return <Reply reply={reply} key={key} />
+    return <Reply reply={reply} currentUser={currentUser} key={key} />
   });
 
   return (
@@ -23,9 +25,14 @@ export default function Comment({ comment }) {
         {/* component for user details such avatar name and when the comment was made */}
         <div className='comment-section'>
           <div className='comment-details-section'>
-            <CommentDetails createdAt={comment.createdAt} user={comment.user} />
+            <CommentDetails createdAt={comment.createdAt} user={comment.user} currentUser={currentUser} />
             {/* component for a reply to the comment */}
-            <CommentReply />
+            {comment.user.username === currentUser.username ?
+              // user reply actions
+              <UserCommentActions />
+              :
+              <CommentReply />
+            }
           </div>
           {/* component for the text of the comment */}
           <CommentText text={comment.content} />
