@@ -8,19 +8,8 @@ export default function Home() {
   return (
     <main className='screen-container'>
       <div className="main-container">
-        {/* <div style={{backgroundColor: 'red', minHeight: '100px', marginBottom: '50px'}}>
-          eeaeeaa
-        </div>
-        <div style={{backgroundColor: 'red', minHeight: '100px', marginBottom: '50px'}}>
-          eeaeeaa
-        </div>
-        <div style={{backgroundColor: 'red', minHeight: '100px', marginBottom: '50px'}}>
-          eeaeeaa
-        </div>
-        <div style={{backgroundColor: 'red', minHeight: '100px', marginBottom: '50px'}}>
-          eeaeeaa
-        </div> */}
-        <CommentsContainer comments={data.comments}/>
+        <CommentsContainer comments={data.comments} currentUser={user}/>
+
         <AddComment user={user}/>
 
         {/* <div class="attribution">
