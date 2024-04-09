@@ -1,7 +1,7 @@
 .add-comment-container {
     display: flex;
     flex-direction: row;
-    background-color: grey;
+    background-color: white;
     width: 733px;
     height: 145px;
     border-radius: 10px;
@@ -41,4 +41,8 @@
     border-radius: 10px;
     /* border: 1px solid black; */
     font-weight: 500;
+}
+
+.send-comment:hover {
+    background-color: hsl(239, 57%, 85%);
 }
