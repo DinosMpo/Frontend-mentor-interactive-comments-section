@@ -6,6 +6,11 @@
     gap: 8px;
     height: 20px;
     /* border: 1px solid black; */
+    cursor: pointer;
+}
+
+.comment-reply-container:hover {
+    opacity: 0.5;
 }
 
 .comment-reply-image {
