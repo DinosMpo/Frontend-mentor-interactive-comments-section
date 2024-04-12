@@ -9,6 +9,7 @@ export default function CommentDetails({ createdAt, user, currentUser }) {
         src={'/' + user.image.png}
         width={30}
         height={30}
+        alt="user image"
       />
       {/* user name */}
       <div className='comment-detail-username'>

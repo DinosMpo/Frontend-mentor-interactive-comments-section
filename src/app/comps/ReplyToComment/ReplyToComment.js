@@ -9,6 +9,7 @@ export default function ReplyToComment() {
           src={'/images/icon-reply.svg'}
           width="14"
           height="13"
+          alt="user image"
         />
       </div>
       <div className='reply-to-comment-text'>
