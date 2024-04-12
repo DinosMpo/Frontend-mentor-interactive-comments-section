@@ -9,6 +9,7 @@ export default function ReplyDetails({ createdAt, user, currentUser }) {
         src={'/' + user.image.png}
         width={30}
         height={30}
+        alt="user image"
       />
       {/* user name */}
       <div className='reply-detail-username'>
