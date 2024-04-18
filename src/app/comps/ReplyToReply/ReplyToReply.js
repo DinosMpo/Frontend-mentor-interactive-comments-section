@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import './ReplyToReply.css'
 
-export default function ReplyToReply() {
+export default function ReplyToReply({ }) {
   return (
     <div className='reply-to-reply-container'>
       <div className='reply-to-reply-image'>

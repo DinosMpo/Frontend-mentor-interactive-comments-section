@@ -16,12 +16,13 @@ export default function Home() {
       setMyData(JSON.parse(localStorage.getItem('frontend-mentor-comments') || ""));
       setDataLoaded(true);
     }
-
   }, []);
 
-  const [myData, setMyData] = useState([]);
+  const [myData, setMyData] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
   const user = myData.currentUser;
+
+  console.log(myData);
 
   return (
     <main className='screen-container'>
