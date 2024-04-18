@@ -6,7 +6,6 @@ import CommentRating from '../CommentRating/CommentRating';
 import CommentReply from '../CommentReply/CommentReply';
 import CommentText from '../CommentText/CommentText';
 import Reply from '../Reply/Reply';
-import ReplyToComment from '../ReplyToComment/ReplyToComment';
 import UserCommentActions from '../UserCommentActions/UserCommentActions';
 import './Comment.css';
 import AddReply from '../AddReply/AddReply';
@@ -15,7 +14,7 @@ export default function Comment({ comment, currentUser, setMyData, myData }) {
   const [showAddReply, setShowAddReply] = useState(false);
   // useEffect(() => console.log(comment.replies));
   const repliesList = comment.replies.map((reply, key) => {
-    return <Reply reply={reply} currentUser={currentUser} key={key} />
+    return <Reply reply={reply} currentUser={currentUser} setMyData={setMyData} myData={myData} key={key} />
   });
 
   return (

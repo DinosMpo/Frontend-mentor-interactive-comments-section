@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import './AddReply.css'
 import { useState, useEffect } from 'react'
-import data from '../../../../public/data.json';
+import setLocalStorage from '@/app/lib/localStorage'
 
 export default function AddReply({ comment, currentUser, setMyData, myData, setShowAddReply, showAddReply }) {
   useEffect(() => {
@@ -14,44 +14,38 @@ export default function AddReply({ comment, currentUser, setMyData, myData, setS
   const [valueReply, setValueReply] = useState('');
 
   const storeValueReply = (e) => {
-    setValueReply(e.target.value);
+    let value = e.target.value;
+    setValueReply(value.substr(comment.user.username.length + 3));
   }
 
   const createReply = () => {
-    let newData = [...myData] ;
-    console.log(newData);
+    let newData = { ...myData };
     let newReply = newData.comments.find(element => element.id === comment.id).replies;
-    console.log(newReply);
-
-    newReply.push(
-      {
-        "id": newReply.length,
-        "content": valueReply,
-        "createdAt": Date(),
-        "score": 0,
-        "replyingTo": comment.user,
-        "user": {
-          "image": {
-            "png": "./images/avatars/image-" + currentUser + ".png",
-            "webp": "./images/avatars/image-" + currentUser + ".webp"
-          },
-          "username": currentUser
-        }
+    let currentDate = new Date();
+    console.log("currentDate:");
+    console.log(currentDate);
+    let reply = {
+      "id": newReply.length,
+      "content": valueReply,
+      "createdAt": currentDate,
+      "score": 0,
+      "replyingTo": comment.user.username,
+      "user": {
+        "username": currentUser.username,
+        "image": {
+          "png": "./images/avatars/image-" + currentUser.username + ".png",
+          "webp": "./images/avatars/image-" + currentUser.username + ".webp"
+        },
       }
-    );
+    };
 
-    // console.log(newReply);
+    // console.log(reply);
 
-
-    newData.comments.map((c) => {
-      if(c.id === comment.id) {
-        c.replies = newReply;
-      }
-    });
+    newReply.push(reply);
 
     setMyData(newData);
-
     setShowAddReply((showAddReply) => !showAddReply);
+    setLocalStorage(JSON.stringify(newData));
   }
 
   return (
